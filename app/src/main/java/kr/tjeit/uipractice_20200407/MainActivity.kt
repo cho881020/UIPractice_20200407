@@ -19,12 +19,17 @@ class MainActivity : AppCompatActivity() {
 
             Log.d("로그인버튼", "버튼 클릭됨")
 
-//            입력한 아이디는 ?입니다.
+//            입력한 아이디 admin@tje.com 이면, 관리자 입니다. 토스트
+//            그 외에는 입력한 아이디는 ?입니다.
 
-            val formattedStr = "입력한 아이디는 ${inputEmail}입니다."
+            if (inputEmail == "admin@tje.com") {
+                Toast.makeText(this, "관리자입니다.", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                val formattedStr = "입력한 아이디는 ${inputEmail}입니다."
 
-            Toast.makeText(this, formattedStr, Toast.LENGTH_SHORT).show()
-
+                Toast.makeText(this, formattedStr, Toast.LENGTH_SHORT).show()
+            }
         }
 
 
